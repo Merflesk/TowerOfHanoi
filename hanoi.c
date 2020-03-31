@@ -30,13 +30,13 @@ void hanoi(int n, char from_rod, char to_rod, char aux_rod)
     // We only move one disk at a time
     if (n == 1)
     {
-        printf("Move disk 1 from rod %c to rod %c", from_rod, to_rod);
+        printf("\nMove disk 1 from rod %c to rod %c", from_rod, to_rod);
     }
 
     // function calls itself
     // First, we move top disk from A to C
     hanoi(n-1, from_rod, aux_rod, to_rod);
-    printf("Move disk %d from %c to %c", n, from_rod, aux_rod);
+    printf("\nMove disk %d from %c to %c", n, from_rod, aux_rod);
     // Second, we move the top disk of C to B
     hanoi(n-1, aux_rod, to_rod, from_rod);
 
