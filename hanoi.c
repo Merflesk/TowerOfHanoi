@@ -45,7 +45,7 @@ void hanoi(int n, char from_rod, char to_rod, char aux_rod)
 int main()
 {
     /* Starting point of the program */
-    int n = 4 // Sets the number of disks in play
+    int n = 4; // Sets the number of disks in play
     hanoi(n, 'A', 'C', 'B'); // A, B, C are the rods. We start by moving top of A to C
     return 0;
 }
