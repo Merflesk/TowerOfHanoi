@@ -18,9 +18,6 @@ The objective of the puzzle is to move the entire stack to another rod, obeying 
    solve a Tower of Hanoi puzzle is 2n − 1, where n is the number of disks.
 */
 
-/*
-
-*/
 #include <stdio.h>
 
 void hanoi(int n, char from_rod, char to_rod, char aux_rod)
@@ -30,13 +27,14 @@ void hanoi(int n, char from_rod, char to_rod, char aux_rod)
     // We only move one disk at a time
     if (n == 1)
     {
-        printf("\nMove disk 1 from rod %c to rod %c", from_rod, to_rod);
+        printf("\n Move disk 1 from rod %c to rod %c", from_rod, to_rod);
+        return;
     }
 
     // function calls itself
     // First, we move top disk from A to C
     hanoi(n-1, from_rod, aux_rod, to_rod);
-    printf("\nMove disk %d from %c to %c", n, from_rod, aux_rod);
+    printf("\n Move disk %d from %c to %c", n, from_rod, aux_rod);
     // Second, we move the top disk of C to B
     hanoi(n-1, aux_rod, to_rod, from_rod);
 
